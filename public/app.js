@@ -68,112 +68,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./src/Class/Student.js":
-/*!******************************!*\
-  !*** ./src/Class/Student.js ***!
-  \******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-var _require = __webpack_require__(/*! ./User */ "./src/Class/User.js"),
-  User = _require.User;
-var Student = /*#__PURE__*/function (_User) {
-  _inherits(Student, _User);
-  var _super = _createSuper(Student);
-  function Student(name, email, subject) {
-    var _this;
-    _classCallCheck(this, Student);
-    _this = _super.call(this, name, email);
-    _this.subject = subject;
-    return _this;
-  }
-  return _createClass(Student);
-}(User);
-module.exports = {
-  Student: Student
-};
-
-/***/ }),
-
-/***/ "./src/Class/User.js":
-/*!***************************!*\
-  !*** ./src/Class/User.js ***!
-  \***************************/
-/***/ ((module) => {
-
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-var User = /*#__PURE__*/function () {
-  function User(name, email) {
-    _classCallCheck(this, User);
-    this.name = name;
-    this.email = email;
-  }
-  _createClass(User, [{
-    key: "setRole",
-    value: function setRole(role)
-    //setter
-    {
-      this.role = role;
-    }
-  }, {
-    key: "setDepartment",
-    value: function setDepartment(department)
-    //setter
-    {
-      this.department = department;
-    }
-  }, {
-    key: "getUserProfile",
-    value: function getUserProfile()
-    //getter
-    {
-      return [this.email, this.email];
-    }
-  }, {
-    key: "getFullUserData",
-    value: function getFullUserData()
-    //getter
-    {
-      return [this.name, this.email, this.role, this.department];
-    }
-  }, {
-    key: "displayUI",
-    value: function displayUI(dataList) {
-      // display user data in html list
-      var list = document.createElement("ul");
-      for (var item in dataList) {
-        var listItem = document.createElement("li");
-        listItem.textContent = dataList[item];
-        list.appendChild(listItem);
-      }
-      document.querySelector("body").appendChild(list);
-    }
-  }]);
-  return User;
-}();
-module.exports = {
-  User: User
-};
-
-/***/ }),
-
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
@@ -182,28 +76,8 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Class_User__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Class/User */ "./src/Class/User.js");
-/* harmony import */ var _Class_User__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Class_User__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Class_Student__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Class/Student */ "./src/Class/Student.js");
-/* harmony import */ var _Class_Student__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Class_Student__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Class_Product__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Class/Product */ "./src/Class/Product.js");
-/* harmony import */ var _Class_Product__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Class_Product__WEBPACK_IMPORTED_MODULE_2__);
-// import { OPPbasics } from "./modules/OPPbasics";
-// OPPbasics()
-
-
-
-var userOne = new _Class_User__WEBPACK_IMPORTED_MODULE_0__.User('Jonas', "jonas@jonas.com");
-userOne.setRole("admin");
-userOne.setDepartment("IT");
-userOne.displayUI(userOne.getFullUserData());
-var student = new _Class_Student__WEBPACK_IMPORTED_MODULE_1__.Student('karolis', 'karol@ka.com', 'JS');
-student.setRole("admin");
-student.setDepartment("IT");
-console.log(student.getFullUserData());
-
-//===============================
-
+/* harmony import */ var _Class_Product__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Class/Product */ "./src/Class/Product.js");
+/* harmony import */ var _Class_Product__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Class_Product__WEBPACK_IMPORTED_MODULE_0__);
 
 var products = [];
 document.querySelector('.productFormContainer__form').addEventListener('submit', function (e) {
@@ -211,7 +85,7 @@ document.querySelector('.productFormContainer__form').addEventListener('submit',
   var productNameTextField = document.getElementById('productName');
   var productPriceTextField = document.getElementById('productPrice');
   var productNameTextYear = document.getElementById('productYear');
-  var newProduct = new _Class_Product__WEBPACK_IMPORTED_MODULE_2__.Product(productNameTextField.value, productPriceTextField.value, productNameTextYear.value);
+  var newProduct = new _Class_Product__WEBPACK_IMPORTED_MODULE_0__.Product(productNameTextField.value, productPriceTextField.value, productNameTextYear.value);
   if (newProduct.checkIfDataIsvalid()) {
     products.push(newProduct);
     newProduct.addProductToDom();
